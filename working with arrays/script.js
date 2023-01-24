@@ -39,3 +39,60 @@ let finds= exampleFind.find(function(element,index,array){
 })
 
 console.log(finds);
+
+/*
+----findIndex() method ---------------
+-returns the index of the first element in an array that satisfies the provided testing function
+-If no elements satisfy the testing function, -1 is returned.
+*/
+const exampleFindIndex = [1, 20, 30, 101,150,200,6];
+let findsIndex = exampleFindIndex.findIndex(function (elem, index) {
+  console.log(index);
+  return elem >160;
+});
+
+console.log(findsIndex);
+
+/*
+-----some() method--------
+
+ - tests whether at least one element in the array passes the test implemented by the provided function. 
+ - It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. 
+ - It doesn't modify the array.
+*/
+
+const exSome=[4,5,6,9,100,106,151];
+let someFunc= exSome.some((elem)=>elem%500==0);
+console.log(someFunc);
+
+/*
+-----every() method---------
+ - tests whether all elements in the array pass the test implemented by the provided function. 
+ - It returns a Boolean value.
+*/
+const exEvery = [50,60,90,100,160,190,200];
+let everyFunc=exEvery.every((elem)=>elem>100);
+console.log(everyFunc);
+
+
+/*
+------ flat() method----------
+creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+*/
+const exFlatArr=[1,2,3,['aja',5,6]];
+console.log(exFlatArr.flat());
+
+const exFlat= [10,20,30,[100,[500,600,700,[900,1100]]]];
+console.log(exFlat.flat(3));
+
+
+/*
+--------flatMap() method---------
+-returns a new array with each element being the result of the callback function and flattened by a depth of 1.
+- It is identical to a map() followed by a flat() of depth 1 (arr.map(...args).flat()), but slightly more efficient
+ than calling those two methods separately.
+*/
+
+const arr1 = [1, 2, [3], [4, 5,[7,8,9]], 6, []];
+const flattened = arr1.flatMap(num => num);
+console.log(flattened); //output:  Array [1, 2, 3, 4, 5, Array [7, 8, 9], 6]
