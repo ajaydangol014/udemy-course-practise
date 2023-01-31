@@ -37,5 +37,43 @@ API
 
 */
 
+//XMLHttpRequest
+//-oldschool way of AJAX call
 
-/*Async Await*/
+const countryData = function (country) {
+  const request = new XMLHttpRequest();
+
+  request.open("GET", `https://restcountries.com/v3.1/name/${country}`);
+
+  request.send(); //fetches the data in the background.
+  request.addEventListener("load", function () {
+    console.log(this.responseText);
+    const [data] = JSON.parse(this.responseText);
+    console.log(data);
+  });
+};
+
+countryData("usa");
+countryData("nepal");
+
+
+/*
+Callback Hells
+-- When we have lot of nested callbacks in order to execute asynschrounous tasks in sequence
+-Problems
+--- it makes our code look very messym
+--- it makes our code read very hard to maintain and hard to understand
+*/
+
+setTimeout(function(){
+	console.log('1 second');
+		setTimeout(function(){
+		console.log('2 second');
+			setTimeout(function(){
+			console.log('3 second');
+				setTimeout(function(){
+				console.log('4 second');
+			},1000);
+		},1000);
+	},1000);
+},1000);
