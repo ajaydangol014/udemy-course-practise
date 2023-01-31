@@ -96,3 +96,16 @@ console.log(exFlat.flat(3));
 const arr1 = [1, 2, [3], [4, 5,[7,8,9]], 6, []];
 const flattened = arr1.flatMap(num => num);
 console.log(flattened); //output:  Array [1, 2, 3, 4, 5, Array [7, 8, 9], 6]
+
+/*
+---------sort() method------------
+- sorts the elements of an array in place and returns the reference to the same array, now sorted. 
+- The default sort order is ascending, built upon converting the elements into strings, 
+then comparing their sequences of UTF-16 code units values.
+*/
+
+const exSort= [5,9,4,3,-1,8,-200];
+const exSortAlpha=['Sabina','Julie','Anne','Racheal','Babita'];
+console.log(exSortAlpha.sort());
+
+/*Async*/
