@@ -5,10 +5,10 @@
 - Long running operations block code execution.
 */
 
-const p = document.querySelector('.p');
-p.textContent='Aj0';
-alert('Dangol');
-p.style.color='red';
+// const paragraph= document.querySelector('.p');
+// paragraph.textContent='Aj0';
+// alert('Dangol');
+// paragraph.style.color='red';
 
 /*Asynchronous Javascript
 
@@ -18,8 +18,10 @@ p.style.color='red';
 
 const p = document.querySelector('.p');
 setTimeout(function(){
+	console.log('test');
 	p.textContent='Aj';
-},5000);
+},0);
+console.log('baira');
 p.style.color='red';
 
 

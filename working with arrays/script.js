@@ -106,6 +106,52 @@ then comparing their sequences of UTF-16 code units values.
 
 const exSort= [5,9,4,3,-1,8,-200];
 const exSortAlpha=['Sabina','Julie','Anne','Racheal','Babita'];
+exSo
 console.log(exSortAlpha.sort());
 
+const exAsc=['Sabina','Julie','anne','Racheal','Babita']; //ascending order.
+const objSort = [{ name: "Sabina" }, { name: "Julie" }]; //ascending and descending order.
+
+//Event Loop / call Stack
+
 /*Async*/
+
+//React Components {3Routing, 1States, 2Hooks}
+//PostGres
+//Node Js
+
+
+/*Questionnaire*/
+//ascending
+const objSort = [{ name: "Sabina" }, { name: "Julie" }];
+objSort.sort(function (a, b) {
+  let firstname = a.name;
+  let secondname = b.name;
+
+  if (firstname < secondname) {
+    return -1;
+  }
+
+  if (firstname > secondname) {
+    return 1;
+  }
+
+  return 0;
+});
+
+console.log(objSort);
+
+// and descending order
+//The localeCompare() method compares two strings in the current locale.
+
+//The localeCompare() method returns sort order -1, 1, or 0 (for before, after, or equal).
+const objSortDesc = [{ name: "Sabina" }, { name: "Julie" }, { name: "Umi" }];
+console.log('des')
+objSortDesc.sort(function (a, b) {
+  let firstname = a.name;
+  let secondname = b.name;
+  firstname.localeCompare(secondname);
+  return secondname.localeCompare(firstname);
+});
+
+console.log(objSortDesc);
