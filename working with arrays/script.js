@@ -109,7 +109,7 @@ const exSortAlpha=['Sabina','Julie','Anne','Racheal','Babita'];
 exSo
 console.log(exSortAlpha.sort());
 
-const exAsc=['Sabina','Julie','anne','Racheal','Babita']; //ascending order.
+
 const objSort = [{ name: "Sabina" }, { name: "Julie" }]; //ascending and descending order.
 
 //Event Loop / call Stack
@@ -121,7 +121,7 @@ const objSort = [{ name: "Sabina" }, { name: "Julie" }]; //ascending and descend
 //Node Js
 
 
-/*Questionnaire*/
+/*Questionnaire -------------------------------------------------------------------------*/
 //ascending
 const objSort = [{ name: "Sabina" }, { name: "Julie" }];
 objSort.sort(function (a, b) {
@@ -155,3 +155,14 @@ objSortDesc.sort(function (a, b) {
 });
 
 console.log(objSortDesc);
+
+
+const exAsc=['Sabina','Julie','anne','Racheal','Babita']; //ascending order.
+
+exAsc.sort(function (a, b) {
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+  return a > b ? 1 : a < b ? -1 : 0;
+});
+
+console.log(exAsc);
