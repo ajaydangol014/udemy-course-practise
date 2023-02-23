@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  position: relative;
+  height: 100vh;
+}
+
+.box,
+.boxs {
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.boxs {
+  background-color: blue;
+}
+
+.ground {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid black;
+}
